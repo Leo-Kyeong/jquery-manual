@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Title</title>
+<script type="text/javascript" src="/common/jquery-3.4.0.min.js"></script>
+<script type="text/javascript">
+	$(function() {
+		const html1 = '<div><h1>삽입된 레이아웃</h1></div>';
+		const html2 = '<h1>삽입된 레이아웃</h1>';
+		// before(엘리먼트), after(엘리먼트), prepend(엘리먼트), append(엘리먼트)
+		// $("#layer2").before(html1);
+		// $("#layer2").after(html1);
+		// $("#layer2").prepend(html2);
+		$("#layer2").append(html2);
+	});
+</script>
+</head>
+<body>
+	<div id="layer1">
+		<h2>첫번째 레이아웃</h2>
+	</div>
+	<div id="layer2">
+		<h2>두번째 레이아웃 1</h2>
+		<h2>두번째 레이아웃 2</h2>
+		<h2>두번째 레이아웃 3</h2>
+	</div>
+	<div id="layer3">
+		<h2>세번째 레이아웃</h2>
+	</div>
+</body>
+</html>

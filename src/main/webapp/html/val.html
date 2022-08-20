@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Title</title>
+<script type="text/javascript" src="/common/jquery-3.4.0.min.js"></script>
+<script type="text/javascript">
+	$(function() {
+		// document.getElementById("textId).value
+		// id = #
+		alert($("#textId").val()); // get
+		$("#textId").val("text2"); // set
+	});
+</script>
+</head>
+<body>
+	<input type="text" id="textId" value="text1"/><br/>
+	<input type="hidden" id="hiddenId" value="hidden1"/><br/>
+	<select id="selectId">
+		<option value="select1">셀렉트1</option>
+		<option value="select2">셀렉트2</option>
+		<option value="select3">셀렉트3</option>
+	</select>
+</body>
+</html>

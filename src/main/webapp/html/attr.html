@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Title</title>
+<script type="text/javascript" src="/common/jquery-3.4.0.min.js"></script>
+<script type="text/javascript">
+	$(function() {
+		// $("#div1").attr("테그의 속성 KEY 명");
+
+		//alert($("#div1").attr("style")); // get
+		//alert($("#div2").attr("class")); // get
+
+		//$("#div1").attr("style", "color:red"); // set
+		//$("#div2").attr("style", "color:blue"); // set
+
+		// alert($("#node1").html()); // get
+		$("#node1").html("<h1>테스트4</h1><h2>테스트5</h2>") // set
+	});
+</script>
+</head>
+<body>
+	<div id="div1" style="display: block">
+		테스트1
+	</div>
+	<div id="div2" class="testDiv">
+		테스트2
+	</div>
+
+	<div id="node1">
+		<b>테스트3</b>
+	</div>
+
+	<div id="node2"></div>
+</body>
+</html>
