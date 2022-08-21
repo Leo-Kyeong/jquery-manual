@@ -22,6 +22,8 @@
 		console.log($("input:eq(4)").val()); // 출력 : 라디오 값2
 		console.log($("input[type=radio]:eq(0)").val()); // 첫번째 라디오 값
 		console.log($("input[type=radio]").eq(2).val()); // 세번째 라디오 값
+
+		console.log($(".listClass li").eq(1).text()); // 출력 : 아이템 값2
 	});
 </script>
 </head>
@@ -35,5 +37,10 @@
 	<input type="radio" name="radioName" checked="checked" value="라디오 값1"/>
 	<input type="radio" name="radioName" value="라디오 값2"/>
 	<input type="radio" name="radioName" value="라디오 값3"/>
+
+	<ul class="listClass">
+		<li>아이템1</li>
+		<li>아이템2</li>
+	</ul>
 </body>
 </html>
