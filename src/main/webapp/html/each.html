@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Title</title>
+<script type="text/javascript" src="/common/jquery-3.4.0.min.js"></script>
+<script type="text/javascript">
+	$(function() {
+		$("div").each(function(index) {
+			// 여러개의 동일한 셀렉터일 경우 each()
+			// $("div").eq(index) = $(this)
+			// const txt = $("div").eq(index).find("input[type=text]").val();
+			// const txt = $(this).find("input[type=text]").val();
+			// console.log("text value = ", txt);
+
+			// if(index === 1){
+			// 	return false; // break;
+			// }
+
+			// const textTag = "<input type='text' value='임시값' />";
+			// $(this).append(textTag);
+		});
+	});
+</script>
+</head>
+<body>
+	<div>
+		<input type="text" value="첫번째 값">
+	</div>
+	<div>
+		<input type="text" value="두번째 값">
+	</div>
+	<div>
+		<input type="text" value="세번째 값">
+	</div>
+	<div>
+		<input type="text" value="네번째 값">
+	</div>
+</body>
+</html>

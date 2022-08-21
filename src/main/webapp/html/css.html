@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Title</title>
+<style type="text/css">
+	.sample1 {
+		color: red;
+		font-weight: bold;
+	}
+	.sample2 {
+		color: green;
+	}
+</style>
+<script type="text/javascript" src="/common/jquery-3.4.0.min.js"></script>
+<script type="text/javascript">
+	$(function() {
+		// 스타일 지정
+		// $("selector").css("스타일 key", "적용하고자 하는 값");
+		// $("div:eq(0)").attr("style", "color:green; font-weight:bold;");
+		// $("div:eq(0)").css("color", "red").css("font-weight", "bold");
+		// $("div:eq(1)").css("color", "blue");
+
+		// 클래스명을 지정된 셀렉터에 추가
+		// $("selector").addClass("클래스명")'
+		// $("#sampleDiv1").addClass("sample1");
+		// $("#sampleDiv2").addClass("sample2");
+
+		// 클래스명을 지정된 셀렉터로부터 삭제
+		// $("selector").removeClass("클래스명");
+		// $("#sampleDiv1").removeClass("sample2");
+		// $("#sampleDiv2").removeClass("sample1");
+
+		// 클래스명이 지정된 셀렉터로부터 존재하는지 여부 판단 -> true/false
+		// $("selector").hasClass("클래스명");
+		// 출력 : 클래스 존재 여부 :  true
+		// console.log("클래스 존재 여부 : ", $("#sampleDiv1").hasClass("sample2"));
+		// 출력 : 클래스 존재 여부 :  false
+		// console.log("클래스 존재 여부 : ", $("#sampleDiv2").hasClass("sample2"));
+
+		// if($("#sampleDiv1").hasClass("sample2")) {
+		// 	$("#sampleDiv1").removeClass("sample2");
+		// }else {
+		// 	$("#sampleDiv1").addClass("sample1");
+		// }
+	});
+</script>
+</head>
+<body>
+	<div id="sampleDiv1" class="sample2">스타일 제어1</div>
+	<div id="sampleDiv2" class="sample1">스타일 제어2</div>
+</body>
+</html>

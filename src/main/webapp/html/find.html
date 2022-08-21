@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Title</title>
+<script type="text/javascript" src="/common/jquery-3.4.0.min.js"></script>
+<script type="text/javascript">
+	$(function() {
+		// parent(), find(), prev(), next()
+
+		// 자식 값들을 찾고자 할 때 = find()
+		// $("table").find("tr:eq(0)").find("td:eq(0)").find("#textId").val()
+		// console.log($("table").find("#textId").val()); // 출력 : 텍스트 값
+		// console.log($("#textId").parent().next().find(".textClass:eq(1)").val());
+		// console.log($(".textClass:eq(2)").prev().val());
+		// console.log($(".textClass:eq(2)").next().val());
+	});
+</script>
+</head>
+<body>
+	<table>
+		<tbody>
+			<tr>
+				<td>
+					<input type="text" id="textId" value="텍스트 값"/>
+				</td>
+				<td>
+					<input type="text" class="textClass" value="텍스트 값1"/>
+					<input type="text" class="textClass" value="텍스트 값2"/>
+					<input type="text" class="textClass" value="텍스트 값3"/>
+					<input type="text" class="textClass" value="텍스트 값4"/>
+				</td>
+			</tr>
+			<tr>
+				<td colspan="2">
+					<input type="radio" name="radioName" value="라디오 값1"/>
+					<label>라디오1</label>
+					<input type="radio" name="radioName" value="라디오 값2" checked="checked"/>
+					<label>라디오2</label>
+				</td>
+			</tr>
+		</tbody>
+	</table>
+</body>
+</html>
