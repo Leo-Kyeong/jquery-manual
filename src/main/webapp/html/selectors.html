@@ -23,7 +23,11 @@
 		console.log($("input[type=radio]:eq(0)").val()); // 첫번째 라디오 값
 		console.log($("input[type=radio]").eq(2).val()); // 세번째 라디오 값
 
-		console.log($(".listClass li").eq(1).text()); // 출력 : 아이템 값2
+		// $("ul li")
+		// $(".xxx li")
+		// $("ul > li")
+		console.log($(".listClass li").eq(1).text()); // 출력 : 아이템2
+		console.log($("ul > li").eq(2).text()); // 출력 : 아이템3
 	});
 </script>
 </head>
@@ -41,6 +45,7 @@
 	<ul class="listClass">
 		<li>아이템1</li>
 		<li>아이템2</li>
+		<li>아이템3</li>
 	</ul>
 </body>
 </html>

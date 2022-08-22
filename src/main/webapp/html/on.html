@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Title</title>
+<script type="text/javascript" src="/common/jquery-3.4.0.min.js"></script>
+<script type="text/javascript">
+	$(function() {
+		// 동적으로 생성된 버튼들은 이벤트 발생이 되지 않는다.
+		// 이유는 HTML 이 로드된 후에 JavaScript 가 실행된다.
+		// 그러므로 로드 이후에 동적으로 생성된 버튼들은 이벤트가 적용되지 않는다.
+		$("#addButton").click(function() {
+			const tag = "<input type='button' class='alertButton' value='클릭'/>";
+			$("#addLayer").append(tag);
+		});
+		// $(".alertButton").click(function() {
+		// 	alert("클릭");
+		// });
+
+		// on()
+		// $(document).on("이벤트", "셀렉터", function() {});
+		$(document).on("click", ".alertButton", function() {
+			alert("클릭")
+		})
+	});
+</script>
+</head>
+<body>
+	<div>
+		<input type="button" id="addButton" value="추가"/>
+	</div>
+	<div id="addLayer">
+		<input type="button" class="alertButton" value="클릭"/>
+	</div>
+</body>
+</html>

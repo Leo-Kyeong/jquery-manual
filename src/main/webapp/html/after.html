@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Title</title>
+<script type="text/javascript" src="/common/jquery-3.4.0.min.js"></script>
+<script type="text/javascript">
+	$(function() {
+		const textTag = "<h2>임시 추가 H2 태그</h2>";
+		// 이전추가 버튼 클릭 시, addLayer 직전에 html 삽입
+		$("#beforeAddButton").click(function() {
+			$("#addLayer").before(textTag);
+		});
+		// 이후추가 버튼 클릭 시, addLayer 직후에 html 삽입
+		$("#afterAddButton").click(function() {
+			$("#addLayer").after(textTag);
+		});
+	});
+</script>
+</head>
+<body>
+	<div>
+		<input type="button" id="beforeAddButton" value="이전추가"/>
+		<input type="button" id="afterAddButton" value="이후추가"/>
+	</div>
+	<div id="addLayer">
+		<h2>기준</h2>
+	</div>
+</body>
+</html>

@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Title</title>
+<script type="text/javascript" src="/common/jquery-3.4.0.min.js"></script>
+<script type="text/javascript">
+	$(function() {
+		// 이벤트 강의 (click, dblclick, keypress, on)
+		// 1. 검색 버튼을 클릭 시, select 태그의 값 + text 태그의 값을 console.log 출력
+		$("#searchButton").click(function(){
+			const searchKey = $("#searchKey").val();
+			const searchValue = $("#searchValue").val();
+			console.log(searchKey);
+			console.log(searchValue);
+		});
+
+		//2. text 태그에 엔터 입력 시, select 태그의 값 + text 태그의 값을 console.log 출력
+		$("#searchValue").keypress(function(event){
+			if(event.keyCode === 13) { // Enter
+				const searchKey = $("#searchKey").val();
+				const searchValue = $("#searchValue").val();
+				console.log(searchKey);
+				console.log(searchValue);
+			}
+		});
+
+		$("#addButton").click(function() {
+			const textTag = "<input type='text' value='임시 추가 값'/>";
+			$("#addLayer").append(textTag);
+		});
+	});
+</script>
+</head>
+<body>
+	<div>
+		<input type="button" id="addButton" value="추가">
+	</div>
+	<div id="addLayer"></div>
+	<div>
+		<select id="searchKey">
+			<option value="first">첫번째값</option>
+			<option value="second">두번째값</option>
+			<option value="third">세번째값</option>
+		</select>
+		<input type="text" id="searchValue"/>
+		<input type="button" id="searchButton" value="검색"/>
+	</div>
+</body>
+</html>
