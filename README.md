@@ -11,7 +11,7 @@
 9. Ajax 알아보기 - HTML, JSON, 파일업로드
 10. 테이블 드래그앤드롭으로 정렬순서 바꾸기 - Tabld DnD
 11. 그리드를 이용하여 게시판 목록 출력해보기 - jqGrid
-12. jqPlot을 이용하여 차트 출력
-13. jsTree를 이용한 Tree 만들기
+12. jqPlot 을 이용하여 차트 출력
+13. jsTree 를 이용한 Tree 만들기
 ### add more
 - <b><a href="https://everlasting-cello-2b6.notion.site/JavaScript-9d0597492c234e11a080217a91461fe3">jquery.blog</a></br>
