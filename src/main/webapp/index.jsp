@@ -13,6 +13,8 @@
 			<li><a href="html/event.html">event</a><br/></li>
 			<li><a href="html/after.html">after</a><br/></li>
 			<li><a href="html/on.html">on</a><br/></li>
+			<li><a href="html/is.html">is</a><br/></li>
+			<li><a href="html/ajax.html">ajax</a><br/></li>
 		</ul>
 	</ul>
 </body>

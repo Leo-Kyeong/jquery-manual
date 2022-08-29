@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Title</title>
+<script type="text/javascript" src="/common/jquery-3.4.0.min.js"></script>
+<script type="text/javascript">
+	$(function() {
+		$.ajax({
+			url : '/list_ajax.jsp',
+			type : 'GET',
+			dataType : 'html',
+			// data : {},
+			success : function(data) { // data 는 html
+				$("table").html(data);
+			}
+		});
+
+		$("#submitButton").on("click", function() {
+			$.ajax({
+				url : '/insert_ajax.jsp',
+				type : 'POST',
+				dataType : 'html',
+				// parameter
+				// data : {content : $("input[name=content]").val()},
+				data : $("form").serialize(),
+				success : function(data) { // data 는 html
+					$("table").html(data);
+				}
+			});
+		});
+	});
+</script>
+</head>
+<body>
+	<form id="form">
+		<input type="text" name="content"/>
+		<input type="button" id="submitButton" value="전송"/>
+	</form>
+	<table width="100%" border="1"></table>
+</body>
+</html>
