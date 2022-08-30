@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Title</title>
+<script type="text/javascript" src="/common/jquery-3.4.0.min.js"></script>
+<script type="text/javascript">
+	$(function() {
+		$("#loadButton").on("click", function() {
+			$.ajax({
+				url : "json/dummy.json",
+				type : "GET",
+				dataType : "json",
+				success : function(data) {
+					$("#titleLayer").html("<h2>" + data.title + "</h2>");
+					$("#subjectLayer").html("<h2>" + data.subject + "</h2>");
+
+					const list = data.list;
+					let tableTag = "";
+
+					$.each(list, function(index, data) {
+						tableTag += "<tr><td>" + data.subject + "</td><td>" + data.content + "</td></tr>";
+					});
+					$("table").html(tableTag);
+				}
+			});
+		});
+		// 다른 domain 의 data 를 가져와야할 경우
+		// 1. jsonp - get 방식 (조회용, 다른 도메인 쪽에서 jsonp 통신 방식에 맞춰서 json 데이터를 내려줄 때만 가능)
+		// 2. cors - get, post 등 여러 방식 사용 가능 (서버에서 설정을 해주어야 접근이 가능)
+	});
+</script>
+</head>
+<body>
+	<input type="button" value="Load" id="loadButton"/>
+	<div id="titleLayer"></div>
+	<div id="subjectLayer"></div>
+	<table width="100%" border="1"></table>
+</body>
+</html>

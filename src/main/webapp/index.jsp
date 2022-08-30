@@ -15,6 +15,7 @@
 			<li><a href="html/on.html">on</a><br/></li>
 			<li><a href="html/is.html">is</a><br/></li>
 			<li><a href="html/ajax.html">ajax</a><br/></li>
+			<li><a href="html/ajax2.html">ajax2</a><br/></li>
 		</ul>
 	</ul>
 </body>
