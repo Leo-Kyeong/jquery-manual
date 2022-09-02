@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Title</title>
+<script type="text/javascript" src="/common/jquery-3.4.0.min.js"></script>
+<script type="text/javascript">
+	$(function() {
+		// HTML5 의 data-* 로 저장한 경우 "data-" 를 생략한 key 를 이용하여 data 를 읽을 수 있다.
+		console.log($("div").data("name"));
+		console.log($("div").data("number"));
+		console.log($("div").data("boolean"));
+		console.log($("div").data("json").name);
+
+		// snake-case 문법으로 저장된 데이터는 camelCase 문법으로 읽어올 수 있다.
+		console.log($("div").data("studentName"));
+
+		// key 생략 시 해당 엘리먼트에 저장된 모든 data 들이 JSON 형식으로 리턴된다.
+		console.log($("div").data());
+
+		// span 태그에 data 저장
+		$("span").data("name", "kyeongWoo");
+		$("span").data("age", "25");
+
+		// data(key)로 저장된 data 읽기
+		const name = $("span").data("name");
+		const age = $("span").data("age");
+
+		// data 삭제
+		$("span").removeData("name");
+		$("span").removeData("age");
+
+		// HTML 에 data-* 롷 저장된 data 삭제
+		// removeData() 를 이용하여도 지워지지 않는다.
+		$("div").data("name", null);
+	});
+</script>
+</head>
+<body>
+	<div data-name="홍길동"
+		 data-number="99"
+	  	 data-boolean="true"
+		 data-json='{"name":"홍길동"}'
+		 data-student-name="학생">
+	</div>
+
+	<span>jQuery: data()의 읽기 방법</span>
+</body>
+</html>
