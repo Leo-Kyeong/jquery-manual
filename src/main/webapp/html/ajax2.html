@@ -19,7 +19,9 @@
 					let tableTag = "";
 
 					$.each(list, function(index, data) {
-						tableTag += "<tr><td>" + data.subject + "</td><td>" + data.content + "</td></tr>";
+						tableTag
+							+= "<tr><td>" + data.subject
+							+ "</td><td>" + data.content + "</td></tr>";
 					});
 					$("table").html(tableTag);
 				}
