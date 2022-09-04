@@ -18,6 +18,7 @@
 			<li><a href="html/ajax.html">ajax</a><br/></li>
 			<li><a href="html/ajax2.html">ajax2</a><br/></li>
 			<li><a href="html/data.html">data</a><br/></li>
+			<li><a href="html/showHide.html">showHide</a><br/></li>
 		</ul>
 	</ul>
 </body>
