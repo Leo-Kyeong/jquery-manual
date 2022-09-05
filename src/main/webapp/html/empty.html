@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Title</title>
+<script type="text/javascript" src="/common/jquery-3.4.0.min.js"></script>
+<script type="text/javascript">
+	$(function() {
+		$("#button").on("click", function() {
+			// 영역 비우기 - empty();
+			// $("#emptyDiv").empty();
+			// 레이어 삭제 함수 - remove();
+			$("#emptyDiv").remove();
+		});
+	});
+</script>
+</head>
+<body>
+	<input type="button" id="button" value="empty&remove"/>
+	<div id="emptyDiv" style="border: 1px solid black;">
+		<h2>문서 제목<br/></h2>
+		문서 내용<br/>
+		문서 내용<br/>
+		문서 내용<br/>
+		문서 내용<br/>
+	</div>
+</body>
+</html>

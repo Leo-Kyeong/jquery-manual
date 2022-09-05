@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Title</title>
+<script type="text/javascript" src="/common/jquery-3.4.0.min.js"></script>
+<script type="text/javascript">
+	$(function() {
+		$(".btn").on("click", function() {
+			const indexBtn = $(".btn").index(this);
+			// 1. 각 버튼을 누르면 해당되는 index 의 레이어를 출력시키기
+			// 단, 다른 영역들은 닫혀야하고 클릭된 영역만 보여주어야 한다.
+			$(".layer").hide();
+			$(".layer").eq(indexBtn).show();
+		});
+	});
+</script>
+</head>
+<body>
+	<input type="button" class="btn" value="button1"/>
+	<input type="button" class="btn" value="button2"/>
+	<input type="button" class="btn" value="button3"/>
+	<div class="layer" style="display: none">
+		레이어1입니다.<br/>
+		레이어1입니다.<br/>
+		레이어1입니다.<br/>
+		레이어1입니다.
+	</div>
+	<div class="layer" style="display: none">
+		레이어2입니다.<br/>
+		레이어2입니다.<br/>
+		레이어2입니다.<br/>
+		레이어2입니다.
+	</div>
+	<div class="layer" style="display: none">
+		레이어3입니다.<br/>
+		레이어3입니다.<br/>
+		레이어3입니다.<br/>
+		레이어3입니다.
+	</div>
+</body>
+</html>
