@@ -22,6 +22,7 @@
 			<li><a href="html/trim.html">trim</a><br/></li>
 			<li><a href="html/empty.html">empty</a><br/></li>
 			<li><a href="html/index.html">index</a><br/></li>
+			<li><a href="html/prop.html">prop</a><br/></li>
 		</ul>
 	</ul>
 </body>

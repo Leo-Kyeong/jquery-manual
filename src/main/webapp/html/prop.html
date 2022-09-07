@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Title</title>
+<script type="text/javascript" src="/common/jquery-3.4.0.min.js"></script>
+<script type="text/javascript">
+	$(function() {
+		$("#checkAll").on("click", function() {
+			$("#checkbox1").prop("checked", true); // false = 체크 해제
+			$("#checkbox2").prop("checked", true); // false = 체크 해제
+			$("#checkbox3").prop("disabled", true); // false = 비활성화 해제
+		});
+
+		console.log($("#checkAll").prop("type")) // checkbox
+		console.log($("#checkAll").prop("id")) // checkAll
+		console.log($("#checkAll").prop("checked")) // false
+	});
+</script>
+</head>
+<body>
+	<div>
+		<input type="checkbox" id="checkAll" value="check">
+		<label for="checkAll">CheckAll</label>
+	</div>
+	<div>
+		<input type="checkbox" id="checkbox1" value="check">
+		<label for="checkbox1">Checkbox1</label>
+		<input type="checkbox" id="checkbox2" value="check">
+		<label for="checkbox2">Checkbox2</label>
+		<input type="checkbox" id="checkbox3" value="check">
+		<label for="checkbox3">Checkbox2</label>
+	</div>
+</body>
+</html>
