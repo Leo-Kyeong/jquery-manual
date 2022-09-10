@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Title</title>
+<script type="text/javascript" src="/common/jquery-3.4.0.min.js"></script>
+<script type="text/javascript" src="/common/jquery.form.min.js"></script>
+<script type="text/javascript">
+	$(function() {
+		$("#sendButton").click(function() {
+			// $("#form").submit();
+
+			// jQuery 와 FormData 객체만으로 파일 업로드 하는 방식
+			// FormData(); 를 사용하면 ajax file upload 가능
+			// 대신 IE 6,7,8,9 만 가능
+			// const formData = new FormData($("#form")[0]); // jQuery
+			// const formData = new FormData(document.getElementById("form")); // Javascript
+
+			// 원하는 것만 넘겨주는 방식
+			// const formData = new FormData();
+			// formData.append("text", $("#textId").val());
+			// formData.append("file", $("#fileId")[0].files[0]);
+
+			// $.ajax({
+			// 	url : '',
+			// 	type : 'POST',
+			// 	processData : false, // 필수
+			// 	contentType : false, // 필수
+			// 	data : formData,
+			// 	success : function() {
+			// 		alert("전송 성공");
+			// 	}
+			// })
+
+			// $("#form").ajaxForm({
+			// 	beforeSubmit : function() {
+			// 		// validation 체크
+			// 		if($("#textId").val() === "") {
+			// 			alert("텍스트 값을 입력하세요.");
+			// 			return false;
+			// 		}
+			// 		return true;
+			// 	},
+			// 	success : function() {
+			// 		alert("업로드 성공");
+			// 	}
+			// });
+			// $("#form").submit();
+		});
+
+		// $("input[name=fileName]").change(function() {
+		// 	$("#form").ajaxForm({
+		// 		beforeSubmit : function() {
+		// 			return true;
+		// 		},
+		// 		success : function() {
+		// 			alert("업로드 성공");
+		// 		}
+		// 	});
+		// 	$("#form").submit();
+		// });
+	});
+
+	// 파일 업로드
+	// 1. form submit (동기)
+	//    - 페이지 전환이 되면서 다시 글쓰기 폼이나 목록폼으로 이동이 된다.
+	// 2. ajax 파일 업로드 (비동기)
+	//    - IE 6,7,8,9 를 배제한다면? new FormData() 객체 사용
+	//    - IE 6, 7, 8, 9 도 지원해야 한다면? jquery.form 플러그인을 이용해서 AJAX 파일업로드 기능을 구현
+</script>
+</head>
+<body>
+	<form id="form" action="" method="post" enctype="multipart/form-data">
+		<input type="text" name="textName" id="textId">
+		<input type="file" name="fileName" id="fileId">
+		<input type="button" id="sendButton" value="전송">
+	</form>
+</body>
+</html>
