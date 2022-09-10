@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Title</title>
+<script type="text/javascript" src="/common/jquery-3.4.0.min.js"></script>
+<script type="text/javascript">
+	$(function() {
+		$("#arrayButton").on("click", function() {
+			// 값들의 갯수 -> 배열 길이를 지정
+			var length = $("input[name=price]").length;
+			// 배열 생성
+			var arr = new Array(length);
+			// 배열 값 입력
+			for(var i = 0; i < length; i++) {
+				arr[i] = $("input[name=price]").eq(i).val();
+				console.log(arr[i]);
+			}
+		})
+	});
+</script>
+</head>
+<body>
+	<div>
+		<input type='text' name='price' value='111'/>
+		<input type='text' name='price' value='222'/>
+		<input type='text' name='price' value='333'/>
+		<input type='text' name='price' value='444'/>
+		<input type="button" id="arrayButton" value="click"/>
+	</div>
+</body>
+</html>
