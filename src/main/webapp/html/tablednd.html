@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Title</title>
+	<style>
+		.blueStyle {
+			background-color: blue;
+			color: white;
+		}
+	</style>
+<script type="text/javascript" src="/common/jquery-3.4.0.min.js"></script>
+<script type="text/javascript" src="/common/jquery.tablednd.min.js"></script>
+<script type="text/javascript">
+	$(function() {
+		// default
+		// $("table").tableDnD();
+
+		// option
+		$("table").tableDnD({
+			onDragClass : 'blueStyle' , // 드래그를 하는 동안 적용되는 클래스
+			onDragStart : function (table, row) {
+				// console.log("드래그 시작");
+			},
+			onDragStop : function (table, row) {
+				// console.log("드래그 중지");
+				$("table").find("tr").each(function (index, data) {
+					$(this).find("th").html(index + 1);
+				})
+			}
+		});
+	});
+</script>
+</head>
+<body>
+	<table border="1">
+		<tr>
+			<th>1</th>
+			<td>첫번째</td>
+			<td>첫번째 타이틀입니다.</td>
+		</tr>
+		<tr>
+			<th>2</th>
+			<td>두번째</td>
+			<td>두번째 타이틀입니다.</td>
+		</tr>
+		<tr>
+			<th>3</th>
+			<td>세번째</td>
+			<td>세번째 타이틀입니다.</td>
+		</tr>
+		<tr>
+			<th>4</th>
+			<td>네번째</td>
+			<td>네번째 타이틀입니다.</td>
+		</tr>
+	</table>
+</body>
+</html>
